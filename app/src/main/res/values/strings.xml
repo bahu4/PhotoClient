@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">PhotoClient</string>
+    <string name="settings">settings</string>
+    <string name="red">red</string>
+    <string name="green">green</string>
+    <string name="blue">blue</string>
+    <string name="pink">pink</string>
+    <string name="yellow">yellow</string>
+    <string name="gray">gray</string>
+    <string name="brown">brown</string>
 </resources>
