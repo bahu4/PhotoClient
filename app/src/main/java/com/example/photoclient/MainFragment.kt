@@ -23,8 +23,9 @@ class MainFragment : Fragment() {
     }
 
     private fun initToolbar(view: View) {
-        var toolbar = view.findViewById<Toolbar>(R.id.mainToolbar)
-        (requireActivity() as AppCompatActivity).setSupportActionBar(toolbar)
+//        val toolbar = view.findViewById<Toolbar>(R.id.mainToolbar)
+//        (requireActivity() as AppCompatActivity).setSupportActionBar(toolbar)
+//        toolbar.title = "123"
     }
 
     private fun initFab(view: View) {

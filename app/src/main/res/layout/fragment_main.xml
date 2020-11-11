@@ -16,4 +16,12 @@
         android:clickable="true"
         android:src="@android:drawable/ic_input_add" />
 
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:backgroundTint="@drawable/selector"
+        android:text="Button" />
+
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -7,4 +7,9 @@
         <item name="colorAccent">@color/colorAccent</item>
 
     </style>
+
+    <style name="MyBtnStyle" parent="Widget.MaterialComponents.Button">
+        <item name="backgroundTint">@color/blue</item>
+        <item name="android:textColor">@color/yellow</item>
+    </style>
 </resources>
