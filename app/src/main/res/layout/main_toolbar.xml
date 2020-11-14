@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:layout_height="wrap_content">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/mainToolbar"
-        app:title="@string/app_name"
-        app:navigationIcon="@drawable/abc_vector_test"
         android:layout_width="match_parent"
         android:layout_height="?actionBarSize"
         android:background="?colorPrimary"
         android:minHeight="?actionBarSize"
-        android:theme="?actionBarTheme" />
+        android:theme="?actionBarTheme"
+        app:navigationIcon="@drawable/abc_vector_test"
+        app:title="@string/app_name" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
