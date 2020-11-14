@@ -16,9 +16,9 @@ class MainFragment : Fragment(R.layout.fragment_main) {
     }
 
     private fun initToolbar(view: View) {
-        val toolbar = view.findViewById<Toolbar>(R.id.mainToolbar)
-        (requireActivity() as AppCompatActivity).setSupportActionBar(toolbar)
-        toolbar.title = javaClass.simpleName
+//        val toolbar = view.findViewById<Toolbar>(R.id.mainToolbar)
+//        (requireActivity() as AppCompatActivity).setSupportActionBar(toolbar)
+//        toolbar.title = javaClass.simpleName
     }
 
     private fun initFab(view: View) {
