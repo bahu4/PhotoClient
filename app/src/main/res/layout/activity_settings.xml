@@ -7,7 +7,7 @@
     android:background="@color/colorPrimaryDark"
     android:orientation="vertical"
     android:padding="5dp"
-    tools:context=".SettingsActivity">
+    tools:context=".SettingsFragment">
 
     <Button
         android:id="@+id/redBtn"
