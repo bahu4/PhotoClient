@@ -6,8 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".MainFragment">
 
-    <include layout="@layout/main_toolbar" />
-
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab"
         style="@style/Widget.MaterialComponents.FloatingActionButton"
@@ -19,7 +17,7 @@
         android:src="@android:drawable/ic_input_add" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/button1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
