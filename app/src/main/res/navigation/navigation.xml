@@ -18,7 +18,7 @@
         android:id="@+id/menu_settings"
         android:name="com.example.photoclient.SettingsFragment"
         android:label="activity_settings"
-        tools:layout="@layout/activity_settings" />
+        tools:layout="@layout/fragment_settings" />
     <fragment
         android:id="@+id/testFragment"
         android:name="com.example.photoclient.TestFragment"

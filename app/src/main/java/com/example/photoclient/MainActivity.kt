@@ -1,5 +1,6 @@
 package com.example.photoclient
 
+import android.content.Context
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
@@ -14,6 +15,8 @@ import com.google.android.material.navigation.NavigationView
 class MainActivity : AppCompatActivity() {
     private lateinit var appBarConfiguration: AppBarConfiguration
     override fun onCreate(savedInstanceState: Bundle?) {
+        val sp = getSharedPreferences("SP", Context.MODE_PRIVATE)
+        setTheme(sp.getInt("SP", Context.MODE_PRIVATE))
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
@@ -35,6 +38,5 @@ class MainActivity : AppCompatActivity() {
     override fun onSupportNavigateUp(): Boolean {
         val navController = findNavController(R.id.nav_host_fragment)
         return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
-
     }
 }
