@@ -8,5 +8,9 @@ object PhotoDataList {
         PhotoData(R.drawable.ic_launcher_background),
         PhotoData(R.drawable.ic_launcher_background),
         PhotoData(R.drawable.ic_launcher_background),
+        PhotoData(R.drawable.ic_launcher_background),
+        PhotoData(R.drawable.ic_launcher_background),
+        PhotoData(R.drawable.ic_launcher_background),
+        PhotoData(R.drawable.ic_launcher_background),
     )
 }

@@ -3,15 +3,17 @@ package com.example.photoclient
 import android.content.Context
 import android.os.Bundle
 import android.view.View
+import android.widget.Button
 import androidx.fragment.app.Fragment
-import kotlinx.android.synthetic.main.fragment_settings.*
 
 class SettingsFragment : Fragment(R.layout.fragment_settings) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        val redBtn = view.findViewById<Button>(R.id.redBtn)
         redBtn.setOnClickListener {
             changeAppStyle(R.style.AppTheme_Red)
         }
+        val blueBtn = view.findViewById<Button>(R.id.blueBtn)
         blueBtn.setOnClickListener {
             changeAppStyle(R.style.AppTheme)
         }
