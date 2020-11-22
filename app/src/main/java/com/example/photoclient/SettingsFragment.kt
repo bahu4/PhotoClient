@@ -18,9 +18,9 @@ class SettingsFragment : Fragment(R.layout.fragment_settings) {
     }
 
     private fun changeAppStyle(style: Int) {
-        val sp = requireActivity().getSharedPreferences("SP", Context.MODE_PRIVATE)
+        val sp = requireActivity().getSharedPreferences("THEME", Context.MODE_PRIVATE)
         val editor = sp.edit()
-        editor.putInt("SP", style)
+        editor.putInt("THEME", style)
         editor.apply()
         requireActivity().recreate()
     }

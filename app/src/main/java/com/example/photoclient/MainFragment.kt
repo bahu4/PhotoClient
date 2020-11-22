@@ -2,12 +2,12 @@ package com.example.photoclient
 
 import android.os.Bundle
 import android.view.*
-import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
-import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.GridLayoutManager
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.snackbar.Snackbar
+import kotlinx.android.synthetic.main.fragment_main.*
 import java.util.*
 
 class MainFragment : Fragment(R.layout.fragment_main) {
@@ -15,13 +15,13 @@ class MainFragment : Fragment(R.layout.fragment_main) {
         super.onViewCreated(view, savedInstanceState)
         initFab(view)
         initToolbar(view)
-        isClicked(view)
+        initRV()
     }
 
-    private fun isClicked(view: View) {
-        view.findViewById<Button>(R.id.button1).setOnClickListener {
-            findNavController().navigate(R.id.action_menu_main_to_testFragment)
-        }
+    private fun initRV() {
+        val adapter = MainRVAdapter()
+        mainRV.adapter = adapter
+        mainRV.layoutManager = GridLayoutManager(context, 2)
     }
 
     private fun initToolbar(view: View) {

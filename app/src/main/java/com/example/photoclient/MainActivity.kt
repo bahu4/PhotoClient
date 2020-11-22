@@ -1,6 +1,5 @@
 package com.example.photoclient
 
-import android.content.Context
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
@@ -10,29 +9,51 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
+import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.navigation.NavigationView
+import kotlinx.android.synthetic.main.fragment_main.*
 
 class MainActivity : AppCompatActivity() {
     private lateinit var appBarConfiguration: AppBarConfiguration
     override fun onCreate(savedInstanceState: Bundle?) {
-        val sp = getSharedPreferences("SP", Context.MODE_PRIVATE)
-        setTheme(sp.getInt("SP", Context.MODE_PRIVATE))
+        initTheme()
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        initView()
+    }
 
-        val toolbar = findViewById<Toolbar>(R.id.mainToolbar)
-        setSupportActionBar(toolbar)
+    private fun initView() {
+        initToolbar()
+        initDrawer()
+        initNavigation()
+    }
 
-        val drawerLayout = findViewById<DrawerLayout>(R.id.drawer_layout)
+    private fun initNavigation() {
         val navView = findViewById<NavigationView>(R.id.nav_view)
         val navController = findNavController(R.id.nav_host_fragment)
+
+        setupActionBarWithNavController(navController, appBarConfiguration)
+        navView.setupWithNavController(navController)
+    }
+
+    private fun initDrawer() {
+        val drawerLayout = findViewById<DrawerLayout>(R.id.drawer_layout)
         appBarConfiguration = AppBarConfiguration(
             setOf(
                 R.id.menu_main, R.id.menu_settings
             ), drawerLayout
         )
-        setupActionBarWithNavController(navController, appBarConfiguration)
-        navView.setupWithNavController(navController)
+    }
+
+    private fun initTheme() {
+        val sp = getSharedPreferences("THEME", MODE_PRIVATE)
+        setTheme(sp.getInt("THEME", MODE_PRIVATE))
+    }
+
+    private fun initToolbar() {
+        val toolbar = findViewById<Toolbar>(R.id.mainToolbar)
+        setSupportActionBar(toolbar)
     }
 
     override fun onSupportNavigateUp(): Boolean {
