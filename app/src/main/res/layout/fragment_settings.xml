@@ -9,23 +9,23 @@
     tools:context=".SettingsFragment">
 
     <Button
-        android:id="@+id/redBtn"
+        android:id="@+id/red_btn"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="@string/red"
         android:layout_margin="2dp"
-        app:layout_constraintEnd_toStartOf="@+id/blueBtn"
+        app:layout_constraintEnd_toStartOf="@+id/blue_btn"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/blueBtn"
+        android:id="@+id/blue_btn"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="Blue"
         android:layout_margin="2dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/redBtn"
+        app:layout_constraintStart_toEndOf="@+id/red_btn"
         app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

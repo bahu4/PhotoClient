@@ -9,11 +9,11 @@ import androidx.fragment.app.Fragment
 class SettingsFragment : Fragment(R.layout.fragment_settings) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val redBtn = view.findViewById<Button>(R.id.redBtn)
+        val redBtn = view.findViewById<Button>(R.id.red_btn)
         redBtn.setOnClickListener {
             changeAppStyle(R.style.AppTheme_Red)
         }
-        val blueBtn = view.findViewById<Button>(R.id.blueBtn)
+        val blueBtn = view.findViewById<Button>(R.id.blue_btn)
         blueBtn.setOnClickListener {
             changeAppStyle(R.style.AppTheme)
         }

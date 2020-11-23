@@ -24,7 +24,7 @@ class MainRVAdapter() : RecyclerView.Adapter<MainRVAdapter.ViewHolder>() {
     override fun getItemCount() = list.size
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        var img = itemView.findViewById<ImageView>(R.id.imageView)
+        var img = itemView.findViewById<ImageView>(R.id.photo_view)
         fun bind(photoData: PhotoData) {
             img.setImageResource(photoData.photo)
         }

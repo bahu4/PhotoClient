@@ -5,9 +5,9 @@ import android.view.*
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.snackbar.Snackbar
-import kotlinx.android.synthetic.main.fragment_main.*
 import java.util.*
 
 class MainFragment : Fragment(R.layout.fragment_main) {
@@ -20,8 +20,9 @@ class MainFragment : Fragment(R.layout.fragment_main) {
 
     private fun initRV() {
         val adapter = MainRVAdapter()
-        mainRV.adapter = adapter
-        mainRV.layoutManager = GridLayoutManager(context, 2)
+        val mainRV = view?.findViewById<RecyclerView>(R.id.main_rec_view)
+        mainRV?.adapter = adapter
+        mainRV?.layoutManager = GridLayoutManager(context, 2)
     }
 
     private fun initToolbar(view: View) {
