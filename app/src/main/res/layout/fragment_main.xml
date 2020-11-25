@@ -21,4 +21,10 @@
         android:clickable="true"
         android:src="@android:drawable/ic_input_add" />
 
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="315dp"
+        android:layout_height="302dp"
+        android:src="@drawable/ic_launcher_background" />
+
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
