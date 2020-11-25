@@ -1,6 +1,7 @@
 package com.example.photoclient
 
 import android.os.Bundle
+import android.os.Environment
 import android.view.*
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
@@ -11,6 +12,7 @@ import com.google.android.material.snackbar.Snackbar
 import java.util.*
 
 class MainFragment : Fragment(R.layout.fragment_main) {
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         initFab(view)
@@ -34,7 +36,14 @@ class MainFragment : Fragment(R.layout.fragment_main) {
         val fab = view.findViewById<FloatingActionButton>(R.id.fab)
         fab.setOnClickListener {
             showSnackBar(view)
+            takePhoto()
+//            requireActivity().applicationContext.getExternalFilesDir(Environment.DIRECTORY_PICTURES)
+
         }
+    }
+
+    private fun takePhoto() {
+
     }
 
     private fun showSnackBar(myView: View) {
