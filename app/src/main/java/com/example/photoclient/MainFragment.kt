@@ -4,6 +4,7 @@ import android.app.Activity
 import android.content.Intent
 import android.graphics.Bitmap
 import android.os.Bundle
+import android.os.Environment
 import android.provider.MediaStore
 import android.view.*
 import android.widget.ImageView
@@ -14,6 +15,7 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.snackbar.Snackbar
+import java.io.File
 import java.util.*
 
 class MainFragment : Fragment(R.layout.fragment_main) {
@@ -68,11 +70,23 @@ class MainFragment : Fragment(R.layout.fragment_main) {
             CAMERA_REQUEST_CODE -> {
                 if (resultCode == Activity.RESULT_OK && data != null) {
                     imageView?.setImageBitmap(data.extras?.get("data") as Bitmap)
+                    savePhoto()
                 }
             }
             else -> {
                 Toast.makeText(context, "Unrecognized request code", Toast.LENGTH_SHORT).show()
             }
         }
+    }
+
+    private fun savePhoto() {
+        val direct: File = File(context?.externalCacheDir + "/photoDir")
+        if (!direct.exists()) {
+            val photoDirectory = File("/sdcard/photoDir")
+            photoDirectory.mkdirs()
+        }
+
+        val file = File(File("/sdcard/photoDir"),  )
+
     }
 }
